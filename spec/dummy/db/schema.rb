@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226223917) do
+ActiveRecord::Schema.define(version: 20171227194642) do
 
   create_table "coin_payment_transactions", force: :cascade do |t|
     t.integer "estimated_value", limit: 8
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20171226223917) do
   end
 
   create_table "currency_conversions", force: :cascade do |t|
-    t.integer "currency"
+    t.integer "currency", limit: 8
     t.integer "price", limit: 8
     t.integer "coin_type"
     t.datetime "created_at"
